@@ -16,6 +16,8 @@ router.get('/', function(req,res){
 
 app.use(router);
 
+mongoose.connect('mongodb://127.0.0.1:27017/tvshows',{useNewUrlParser: true});
+
 app.listen(3000,function(){
     console.log("Node server is running on http://localhost:3000/");
 });
